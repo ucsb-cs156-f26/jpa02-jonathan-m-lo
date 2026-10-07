@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
 
 public class TeamTest {
 
@@ -94,6 +95,12 @@ public class TeamTest {
         t2.setName("foo");
         t2.addMember("bar");
         assertEquals(t1.hashCode(), t2.hashCode());
+        // instantiate t as a Team object
+        Team t = new Team();
+        int result = t.hashCode();
+        int expectedResult = 1;
+        assertEquals(expectedResult, result);
+
     }
     
 
